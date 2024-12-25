@@ -1,0 +1,42 @@
+ERROR 2024-12-22 19:08:52,259 views Unexpected error in get_secret: No Secret matches the given query.
+Traceback (most recent call last):
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\.venv\Lib\site-packages\django\shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\.venv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+secrets_service.models.Secret.DoesNotExist: Secret matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\one_time_secret\secrets_service\views.py", line 37, in get_secret
+    secret_obj = get_object_or_404(Secret, secret_key=secret_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\.venv\Lib\site-packages\django\shortcuts.py", line 88, in get_object_or_404
+    raise Http404(
+django.http.response.Http404: No Secret matches the given query.
+ERROR 2024-12-22 19:08:52,291 log Internal Server Error: /api/secrets/secrets/N1kqOTtb0k12E9zE8BrD7dbkvvXTolyNnldkeCSmA7lvFzagal73e9dagSj4C2T0/
+ERROR 2024-12-22 19:12:15,183 views Unexpected error in get_secret: No Secret matches the given query.
+Traceback (most recent call last):
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\.venv\Lib\site-packages\django\shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\.venv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+secrets_service.models.Secret.DoesNotExist: Secret matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\one_time_secret\secrets_service\views.py", line 37, in get_secret
+    secret_obj = get_object_or_404(Secret, secret_key=secret_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mamas\PycharmProjects\OneTimeService\.venv\Lib\site-packages\django\shortcuts.py", line 88, in get_object_or_404
+    raise Http404(
+django.http.response.Http404: No Secret matches the given query.
+ERROR 2024-12-22 19:12:15,186 log Internal Server Error: /api/secrets/secrets/01lqZdHbKQbcahVh4sSiqMLpl5VIlgIdxaeqTu4EQM2Tt9LX3WCoa7V3s58C7nLd/
+ERROR 2024-12-22 19:16:17,349 views Secret not found for key: ldre1MQeZdkl8yJrksm09PzTA64J8zP5W9XKtPTXSqQGfFdYygVDmG2o2GfzljSo
+ERROR 2024-12-22 19:16:41,996 views Secret not found for key: dIFyk1MkWW4vGZZyIwQqX0IuUt12v1LAObplxy9K4ZqF5IKyGvkzm9qPEaaXs4yK
+ERROR 2024-12-22 19:17:55,324 views Secret not found for key: nmC1SXtyWHZnVnjyKZu5ezwBT0oK1qjwldYVLmv0o8H5amiZRpaihRgxy6J6U92V
+ERROR 2024-12-23 00:03:26,993 views Secret not found for key: VwXj8uobn8Lzs5tTuJxudLVMRIkfW9l7gzelfsqHjRRGuFpcmdPZRYodUNCApkmG

@@ -1,0 +1,26 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: one_time_secret_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Qw3pp48z123@
+      MYSQL_DATABASE: one_time_secret
+    ports:
+      - '3306:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    build: .
+    container_name: one_time_secret_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+
+volumes:
+  db_data:
